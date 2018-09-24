@@ -21,7 +21,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
-
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -355,9 +364,13 @@
                 
               
 
-              <time title="创建时间：2018-09-24 15:52:21" itemprop="dateCreated datePublished" datetime="2018-09-24T15:52:21+08:00">2018-09-24</time>
+              <time title="创建时间：2018-09-24 15:52:21 / 修改时间：21:28:33" itemprop="dateCreated datePublished" datetime="2018-09-24T15:52:21+08:00">2018-09-24</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -408,6 +421,7 @@
 
     
 
+    
     
     
     
@@ -544,7 +558,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -557,7 +572,13 @@
 
 
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
 
+<!--
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
@@ -568,8 +589,12 @@
 
   <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.1</div>
 
+-->
 
-
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共73字</span>
+</div>
 
         
 
@@ -729,3 +754,6 @@
 	
 </body>
 </html>
+<!-- 页面点击小红心 -->
+	<script type="text/javascript" src="/js/src/love.js"></script>
+
