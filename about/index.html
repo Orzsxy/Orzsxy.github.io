@@ -411,8 +411,10 @@
 
   
     <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDg2MS8xNzM4Ng"></div>
     </div>
-    
+
+  
 
 
 
@@ -742,6 +744,21 @@
 
 
   
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: 'about/index.html'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+   
+  
  
 
 
@@ -749,33 +766,6 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-    
-  
-  <script src="[object Object]"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    }); 
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'ijVU80FGObfpPGFUJyyr3rB9-gzGzoHsz',
-        appKey: 'HhK8FDak1It7Gn0AOo8mgq7m',
-        placeholder: 'laiA',
-        avatar:'mm',
-        meta: guest,
-        pageSize: 10,
-        visitor: false
-    });
-  </script>
 
 
 
