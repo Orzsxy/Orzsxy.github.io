@@ -836,7 +836,61 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    }); 
+    new Valine({
+        av: AV,
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ijVU80FGObfpPGFUJyyr3rB9-gzGzoHsz',
+        appKey: 'HhK8FDak1It7Gn0AOo8mgq7m',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!填写邮箱能很快收到我的回复喔！',
+        avatar:'monsterid',
+        guest_info: guest ,  //评论者只需要提供评论的昵称即可
+        pageSize: '15' || 10,
+    });
+  </script>
 
+<!--
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  //删除Valine核心代码库外链调用
+  <script src="/js/src/Valine.min.js"></script>  //调用刚下载的本地文件以加速加载速度
+
+    //这里改为从本地加载
+  
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'ijVU80FGObfpPGFUJyyr3rB9-gzGzoHsz',
+        appKey: 'HhK8FDak1It7Gn0AOo8mgq7m',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!填写邮箱能很快收到我的回复喔！',
+        avatar:'monsterid',
+        guest_info: guest ,  //评论者只需要提供评论的昵称即可
+        pageSize: '15' || 10,
+    });
+  </script>
+
+-->
 
   
 
@@ -1199,5 +1253,36 @@
 </html>
   <!-- 页面点击小红心 -->
 	<script type="text/javascript" src="/js/src/love.js"></script>
+  
+<!--撒花,不过把我的博文字都给覆盖了,就删除了，要在source css sustom.styl里面加上https://www.hojun.cn/2018/08/23/%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD%E7%89%B9%E6%95%88/ css代码块
+<style>
+.snowfall-flakes{animation:sakura 1s linear 0s infinite;}
+@keyframes sakura{
+0% {transform:rotate3d(0, 0, 0, 0deg);}
+25%{transform:rotate3d(1, 1, 0, 60deg);}
+50%{transform:rotate3d(1, 1, 0, 0deg);}
+75%{transform:rotate3d(1, 0, 0, 60deg);}
+100% {transform:rotate3d(1, 0, 0, 0deg);}
+}
+</style>
 
-
+<script type="text/javascript" src="/js/src/jquery.min.js"></script>
+<script type="text/javascript" src="/js/src/snowfall.jquery.js"></script>
+<script>
+    function sakuraInit() {
+        $(document).snowfall('clear');
+        if (document.body.clientWidth > 600) {
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+        } else {
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+        }
+    }
+    window.onload = sakuraInit();
+</script>
+-->
