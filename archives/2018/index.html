@@ -38,13 +38,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -115,7 +108,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '6.4.1',
-    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -228,7 +221,7 @@
     </div>
     
       
-        <p class="site-subtitle">YY</p>
+        <h1 class="site-subtitle" itemprop="description">YY</h1>
       
     
   </div>
@@ -401,7 +394,7 @@
         
           
           <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+            <h2 class="archive-year" id="archive-year-2018">2018</h2>
           </div>
         
         
@@ -411,7 +404,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h2 class="post-title">
+      <h3 class="post-title">
         
             <a class="post-title-link" href="/2018/11/06/text-0/" itemprop="url">
               
@@ -419,7 +412,7 @@
               
             </a>
         
-      </h2>
+      </h3>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -448,7 +441,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h2 class="post-title">
+      <h3 class="post-title">
         
             <a class="post-title-link" href="/2018/09/24/hello-world/" itemprop="url">
               
@@ -456,7 +449,7 @@
               
             </a>
         
-      </h2>
+      </h3>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -509,6 +502,10 @@
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://pdecrim8e.bkt.clouddn.com/a.gif"
+                alt="SXY" />
             
               <p class="site-author-name" itemprop="name">SXY</p>
               <p class="site-description motion-element" itemprop="description">YTU</p>
@@ -567,17 +564,22 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/Orzsxy" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  <a href="https://github.com/Orzsxy" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="mailto:921560202@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="https://blog.csdn.net/sxy201658506207" target="_blank" title="CSDN" rel="external nofollow"><i class="fa fa-fw fa-pinterest"></i>CSDN</a>
                   
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://blog.csdn.net/sxy201658506207" target="_blank" title="CSDN"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  <a href="http://pdecrim8e.bkt.clouddn.com/QQ.jpg" target="_blank" title="QQ" rel="external nofollow"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:921560202@qq.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
@@ -636,10 +638,9 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heartbeat"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">SXY</span>
  
@@ -647,23 +648,20 @@
 
   
 </div>
+<span id="timeDate" title="网站运行时间">载入天数...</span><span id="times" title="网站运行时间">载入时分秒...</span>
 
+  
 
 
 
 
 <!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.1</div>
 
 -->
+
 
         
 <div class="busuanzi-count">
@@ -700,9 +698,16 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
+    <!-- 这是干啥的-->
+   <!-- 
+          <script type="text/javascript"
+         color="255,160,122" opacity='0.7' zIndex="-2" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+    -->
     
 	
     
@@ -738,6 +743,35 @@
 
     
   </div>
+  <!--此处为建站时间 -->
+  <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("09/24/2018 23:45:01");
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML ="( ๑´•ω•) '(ㆆᴗㆆ)本弱运行"+dnum+"&thinsp;天"; 
+        document.getElementById("times").innerHTML = hnum + "&thinsp;时" + mnum + "&thinsp;分" + snum + "&thinsp;秒"; 
+    } 
+  setInterval("createtime()",250);
+  </script>
+    <!-- 页面点击小红心 -->
+	<script type="text/javascript" src="/js/src/love.js"></script>
+  <!--input特效-->
+  <script src="/js/src/activate-power-mode.js"></script>
+  <script>
+  POWERMODE.colorful = true; // make power mode colorful
+  POWERMODE.shake = false; // turn off shake
+  document.body.addEventListener('input', POWERMODE);
+  </script>
+  <!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
 
   
 
@@ -864,10 +898,10 @@
 <!--
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  //删除Valine核心代码库外链调用
-  <script src="/js/src/Valine.min.js"></script>  //调用刚下载的本地文件以加速加载速度
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  
+  <script src="/js/src/Valine.min.js"></script>  
 
-    //这里改为从本地加载
+   
   
   <script src="/js/src/Valine.min.js"></script>
   
@@ -878,6 +912,7 @@
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
+        av: AV,
         el: '#comments' ,
         verify: false,
         notify: false,
@@ -885,9 +920,16 @@
         appKey: 'HhK8FDak1It7Gn0AOo8mgq7m',
         placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!填写邮箱能很快收到我的回复喔！',
         avatar:'monsterid',
-        guest_info: guest ,  //评论者只需要提供评论的昵称即可
+        guest_info: ['nick']//guest ,  //评论者只需要提供评论的昵称即可
         pageSize: '15' || 10,
     });
+    //增加以下六行代码去除 power by valine
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
   </script>
 
 -->
@@ -1223,37 +1265,115 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
 
   
 
   
-  
 
   
 
   
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
 
-  
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
 
-  
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
 
-  <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
-<script type="text/javascript" src="/js/src/custom.js"></script>
-  
-  
-	
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
 
-	
-   <!-- 代码块复制功能 -->
-<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+
 </body>
 </html>
-  <!-- 页面点击小红心 -->
-	<script type="text/javascript" src="/js/src/love.js"></script>
-  
 <!--撒花,不过把我的博文字都给覆盖了,就删除了，要在source css sustom.styl里面加上https://www.hojun.cn/2018/08/23/%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD%E7%89%B9%E6%95%88/ css代码块
 <style>
 .snowfall-flakes{animation:sakura 1s linear 0s infinite;}
