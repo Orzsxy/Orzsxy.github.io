@@ -130,24 +130,25 @@
 
 
 
-  <meta name="description" content="YTU">
-<meta name="keywords" content="YTU_SXY">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gravel">
-<meta property="og:url" content="https://orzsxy.github.io/archives/2018/11/index.html">
+  <meta name="description" content="题意：有一个n*m的格子，每个格子都有黑白两面（0表示白色，1表示黑色）。我们需要把所有的格子都反转成黑色，每反转一个格子，它上下左右的格子都会跟着反转。请求出用最小步数完成反转时每个格子反转的次数。有多个解时，输出字典序最小的一组。 下面引自挑战内容：首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。此外，翻转的格子的集 合相同的话，其次序是无关紧要的。因此，总共有2NM种翻转的方">
+<meta name="keywords" content="开关问题 状态压缩">
+<meta property="og:type" content="article">
+<meta property="og:title" content="poj3279">
+<meta property="og:url" content="https://orzsxy.github.io/2018/11/24/poj3279/index.html">
 <meta property="og:site_name" content="Gravel">
-<meta property="og:description" content="YTU">
+<meta property="og:description" content="题意：有一个n*m的格子，每个格子都有黑白两面（0表示白色，1表示黑色）。我们需要把所有的格子都反转成黑色，每反转一个格子，它上下左右的格子都会跟着反转。请求出用最小步数完成反转时每个格子反转的次数。有多个解时，输出字典序最小的一组。 下面引自挑战内容：首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。此外，翻转的格子的集 合相同的话，其次序是无关紧要的。因此，总共有2NM种翻转的方">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-23T23:16:08.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gravel">
-<meta name="twitter:description" content="YTU">
+<meta name="twitter:title" content="poj3279">
+<meta name="twitter:description" content="题意：有一个n*m的格子，每个格子都有黑白两面（0表示白色，1表示黑色）。我们需要把所有的格子都反转成黑色，每反转一个格子，它上下左右的格子都会跟着反转。请求出用最小步数完成反转时每个格子反转的次数。有多个解时，输出字典序最小的一组。 下面引自挑战内容：首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。此外，翻转的格子的集 合相同的话，其次序是无关紧要的。因此，总共有2NM种翻转的方">
 
 
 
 
 
 
-  <link rel="canonical" href="https://orzsxy.github.io/archives/2018/11/"/>
+  <link rel="canonical" href="https://orzsxy.github.io/2018/11/24/poj3279/"/>
 
 
 
@@ -157,7 +158,7 @@
   };
 </script>
 
-  <title>归档 | Gravel</title>
+  <title>poj3279 | Gravel</title>
   
 
 
@@ -204,7 +205,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,7 +278,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -341,254 +342,267 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="comment"></div>
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://orzsxy.github.io/2018/11/24/poj3279/">
+    
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SXY">
+      <meta itemprop="description" content="YTU">
+      <meta itemprop="image" content="http://pdecrim8e.bkt.clouddn.com/a.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gravel">
+    </span>
+ 
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">poj3279
+              
+            
+          </h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+                     
+              
+                <span class="post-meta-item-text">Posted on</span>
+            
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 07:10:07" itemprop="dateCreated datePublished" datetime="2018-11-24T07:10:07+08:00">2018-11-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                   
+                
+                  <span class="post-meta-item-text">Edited on</span>
+            
+                
+                <time title="修改时间：2018-11-24 07:16:08" itemprop="dateModified" datetime="2018-11-24T07:16:08+08:00">2018-11-24</time>
+              
+            
+          </span>
+        <!-- 
+  <span class="post-updated">
+    &nbsp; | &nbsp; post.updated
+    <time itemprop="dateUpdated" datetime="2018-11-24T07:16:08+08:00" content="2018-11-24">
+      2018-11-24
+    </time>
+  </span>
+ -->
+
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
         
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-      
-
-      
-
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+               
+              
+                <span class="post-meta-item-text">Sort</span>
+                    
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开关问题/" itemprop="url" rel="index"><span itemprop="name">开关问题</span></a></span>
         
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开关问题/状态压缩/" itemprop="url" rel="index"><span itemprop="name">状态压缩</span></a></span>
         
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
+          
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/24/poj3279/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/24/poj3279/" itemprop="commentCount"></span>
+                </a>
+              </span>
+   
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/24/poj1321/" itemprop="url">
-              
-                <span itemprop="name">poj1321 棋盘问题</span>
-              
-            </a>
-        
-      </h3>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+           <span class="post-meta-divider">|</span>
+ <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1k</span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-24T12:59:19+08:00"
-              content="2018-11-24" >
-          11-24
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/24/poj3279/" itemprop="url">
-              
-                <span itemprop="name">poj3279</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-24T07:10:07+08:00"
-              content="2018-11-24" >
-          11-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/24/poj3278/" itemprop="url">
-              
-                <span itemprop="name">poj3278 Catch That Cow</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-24T07:05:01+08:00"
-              content="2018-11-24" >
-          11-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/24/poj2251/" itemprop="url">
-              
-                <span itemprop="name">POJ2251 Dungeon Master</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-24T06:50:25+08:00"
-              content="2018-11-24" >
-          11-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/06/text-0/" itemprop="url">
-              
-                <span itemprop="name">text-0</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-06T11:44:07+08:00"
-              content="2018-11-06" >
-          11-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        <p>题意：有一个n*m的格子，每个格子都有黑白两面（0表示白色，1表示黑色）。我们需要把所有的格子都反转成黑色，每反转一个格子，它上下左右的格子都会跟着反转。请求出用最小步数完成反转时每个格子反转的次数。有多个解时，输出字典序最小的一组。</p>
+<p>下面引自挑战内容：<br>首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。此外，翻转的格子的集 合相同的话，其次序是无关紧要的。因此，总共有2NM种翻转的方法。不过这个解空间太大了， 我们需要想出更有效的办法。 不妨先看看左上角的格子。在这里，除了翻转(1,1)之外，翻转(1,2)和(2,1)也可以把这个格子翻 转。<br>  于是不妨先指定好上面一行的翻转方法。此时能够翻转(1,1)的只剩下(2,1)了，所以可以直接判 断(2,1)是否需要翻转。类似地(2,1)~(2,N)都能这样判断，如此反复下去就可以确定所有格子的翻 转方法。后(M,1)~(M,N)如果并非全为白色，就意味着不存在可行的操作方法。<br>   像这样，先确定第一行的翻转方式，然后可以很容易判断这样是否存在解以及解的小步数是多 少，这样将第一行的所有翻转方式都尝试一次就能求出整个问题的小步数。这个算法中上面 一行的翻转方式共有2N种，复杂度为O(MN2N)。<br>–引自：《挑战》</p>
+<p>模型建立:  0.也就是说除了最后一行，上面的所有行的颜色状态都可以由 在上面的一行的状态进行确定（即0-(n-1)行之间的反转来把他确定位0的状态，第n行在这个时候就直接判断是否都为0的状态，是的话就是有效解，然后在取相对优的解）</p>
+<pre><code>1. 第一行的状态咱们又可以通过枚举子集来进行找出所有的情况，那么下面的所有行就可以通过迭代以及是否反转 来确定状态。
+</code></pre><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf=<span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> state[<span class="number">25</span>][<span class="number">25</span>];</span><br><span class="line"><span class="keyword">int</span> en[<span class="number">25</span>][<span class="number">25</span>];</span><br><span class="line"><span class="keyword">int</span> flip[<span class="number">25</span>][<span class="number">25</span>];</span><br><span class="line"><span class="keyword">int</span> dir[<span class="number">5</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cnt=state[x][y];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> dx=x+dir[i][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> dy=y+dir[i][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(dx&lt;<span class="number">0</span>||dx&gt;=n||dy&lt;<span class="number">0</span>||dy&gt;=m)<span class="keyword">continue</span>;</span><br><span class="line">        cnt+=flip[dx][dy];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt&amp;<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">clca</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(get(i<span class="number">-1</span>,j))</span><br><span class="line">                flip[i][j]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(get(n<span class="number">-1</span>,i))</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;++j)</span><br><span class="line">            tmp+=flip[i][j];</span><br><span class="line">    <span class="keyword">return</span> tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">-1</span>;</span><br><span class="line">    <span class="comment">//二进制的状态压缩过程,对这道题来讲就是对flip[0]的每一个状态位,都枚举一遍,</span></span><br><span class="line">    <span class="comment">//只要抓住 移位，设置标志位 两个要素也没有那么难.</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">1</span>&lt;&lt;m;++i)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(flip,<span class="number">0</span>,<span class="keyword">sizeof</span>(flip));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;++j)&#123;</span><br><span class="line">            flip[<span class="number">0</span>][j]=i&gt;&gt;j&amp;<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> cnt=clca();<span class="comment">//然后这儿进行判断是解的优劣情况</span></span><br><span class="line">        <span class="keyword">if</span>(cnt&gt;=<span class="number">0</span>&amp;&amp;(ans&lt;<span class="number">0</span>||ans&gt;cnt))&#123;</span><br><span class="line">             ans=cnt;</span><br><span class="line">             <span class="built_in">memcpy</span>(en,flip,<span class="keyword">sizeof</span>(flip));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(ans&lt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"IMPOSSIBLE\n"</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;++j)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d%c"</span>,en[i][j],j+<span class="number">1</span>==m?<span class="string">'\n'</span>:<span class="string">' '</span>);</span><br><span class="line">    <span class="comment">//printf("%d\n",ans);</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m)!=EOF)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;m;++j)</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;state[i][j]);</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
-
     </div>
+
+    
+
+    
+    
+    
+    
+      <div>
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      <div>
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/开关问题-状态压缩/" rel="tag"><i class="fa fa-tag"></i> 开关问题 状态压缩</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/24/poj3278/" rel="next" title="poj3278 Catch That Cow">
+                <i class="fa fa-chevron-left"></i> poj3278 Catch That Cow
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/24/poj1321/" rel="prev" title="poj1321 棋盘问题">
+                poj1321 棋盘问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+    
+
+
 
         </div>
         
@@ -971,6 +985,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 

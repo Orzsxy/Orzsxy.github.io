@@ -383,7 +383,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/11/24/poj1321/" itemprop="url">
-                  poj1321
+                  poj1321 棋盘问题
                 </a>
               
             
@@ -430,7 +430,7 @@
                   <span class="post-meta-item-text">Edited on</span>
             
                 
-                <time title="修改时间：2018-11-24 05:17:45" itemprop="dateModified" datetime="2018-11-24T05:17:45+08:00">2018-11-24</time>
+                <time title="修改时间：2018-11-24 06:50:16" itemprop="dateModified" datetime="2018-11-24T06:50:16+08:00">2018-11-24</time>
               
             
           </span>
@@ -504,6 +504,629 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/24/poj1321/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="comment"></div>
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://orzsxy.github.io/2018/11/24/poj3279/">
+    
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SXY">
+      <meta itemprop="description" content="YTU">
+      <meta itemprop="image" content="http://pdecrim8e.bkt.clouddn.com/a.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gravel">
+    </span>
+ 
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/24/poj3279/" itemprop="url">
+                  poj3279
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+                     
+              
+                <span class="post-meta-item-text">Posted on</span>
+            
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 07:10:07" itemprop="dateCreated datePublished" datetime="2018-11-24T07:10:07+08:00">2018-11-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                   
+                
+                  <span class="post-meta-item-text">Edited on</span>
+            
+                
+                <time title="修改时间：2018-11-24 07:16:08" itemprop="dateModified" datetime="2018-11-24T07:16:08+08:00">2018-11-24</time>
+              
+            
+          </span>
+        <!-- 
+  <span class="post-updated">
+    &nbsp; | &nbsp; post.updated
+    <time itemprop="dateUpdated" datetime="2018-11-24T07:16:08+08:00" content="2018-11-24">
+      2018-11-24
+    </time>
+  </span>
+ -->
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+        
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+               
+              
+                <span class="post-meta-item-text">Sort</span>
+                    
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开关问题/" itemprop="url" rel="index"><span itemprop="name">开关问题</span></a></span>
+        
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/开关问题/状态压缩/" itemprop="url" rel="index"><span itemprop="name">状态压缩</span></a></span>
+        
+                
+                
+              
+            </span>
+          
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/24/poj3279/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/24/poj3279/" itemprop="commentCount"></span>
+                </a>
+              </span>
+   
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题意：有一个n*m的格子，每个格子都有黑白两面（0表示白色，1表示黑色）。我们需要把所有的格子都反转成黑色，每反转一个格子，它上下左右的格子都会跟着反转。请求出用最小步数完成反转时每个格子反转的次数。有多个解时，输出字典序最小的一组。
+下面引自挑战内容：首先，同一个格子翻转两次的话就会恢复原状，所以
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/24/poj3279/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="comment"></div>
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://orzsxy.github.io/2018/11/24/poj3278/">
+    
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SXY">
+      <meta itemprop="description" content="YTU">
+      <meta itemprop="image" content="http://pdecrim8e.bkt.clouddn.com/a.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gravel">
+    </span>
+ 
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/24/poj3278/" itemprop="url">
+                  poj3278 Catch That Cow
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+                     
+              
+                <span class="post-meta-item-text">Posted on</span>
+            
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 07:05:01" itemprop="dateCreated datePublished" datetime="2018-11-24T07:05:01+08:00">2018-11-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                   
+                
+                  <span class="post-meta-item-text">Edited on</span>
+            
+                
+                <time title="修改时间：2018-11-24 07:08:02" itemprop="dateModified" datetime="2018-11-24T07:08:02+08:00">2018-11-24</time>
+              
+            
+          </span>
+        <!-- 
+  <span class="post-updated">
+    &nbsp; | &nbsp; post.updated
+    <time itemprop="dateUpdated" datetime="2018-11-24T07:08:02+08:00" content="2018-11-24">
+      2018-11-24
+    </time>
+  </span>
+ -->
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+        
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+               
+              
+                <span class="post-meta-item-text">Sort</span>
+                    
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/搜索/" itemprop="url" rel="index"><span itemprop="name">搜索</span></a></span>
+        
+                
+                
+              
+            </span>
+          
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/24/poj3278/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/24/poj3278/" itemprop="commentCount"></span>
+                </a>
+              </span>
+   
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          FJ要抓奶牛。   开始输入N（FJ的位置）K（奶牛的位置）。FJ有三种移动方法：1、向前走一步，耗时一分钟。                 2、向后走一步，耗时一分钟。                 3、向前移动到当前位置的两倍N*2，耗时一分钟。问FJ抓到奶牛的最少时间。奶牛不会动。1234
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/24/poj3278/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="comment"></div>
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://orzsxy.github.io/2018/11/24/poj2251/">
+    
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SXY">
+      <meta itemprop="description" content="YTU">
+      <meta itemprop="image" content="http://pdecrim8e.bkt.clouddn.com/a.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gravel">
+    </span>
+ 
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/24/poj2251/" itemprop="url">
+                  POJ2251 Dungeon Master
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+                     
+              
+                <span class="post-meta-item-text">Posted on</span>
+            
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-24 06:50:25" itemprop="dateCreated datePublished" datetime="2018-11-24T06:50:25+08:00">2018-11-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                   
+                
+                  <span class="post-meta-item-text">Edited on</span>
+            
+                
+                <time title="修改时间：2018-11-24 06:56:44" itemprop="dateModified" datetime="2018-11-24T06:56:44+08:00">2018-11-24</time>
+              
+            
+          </span>
+        <!-- 
+  <span class="post-updated">
+    &nbsp; | &nbsp; post.updated
+    <time itemprop="dateUpdated" datetime="2018-11-24T06:56:44+08:00" content="2018-11-24">
+      2018-11-24
+    </time>
+  </span>
+ -->
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+        
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+               
+              
+                <span class="post-meta-item-text">Sort</span>
+                    
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/搜索/" itemprop="url" rel="index"><span itemprop="name">搜索</span></a></span>
+        
+                
+                
+              
+            </span>
+          
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/24/poj2251/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/24/poj2251/" itemprop="commentCount"></span>
+                </a>
+              </span>
+   
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          题目大意：给一个三维图，可以前后左右上下6种走法，走一步1分钟，求最少时间（其实就是最短路）分析：DFS的话复杂度为O(6^n)会TLE）123456789101112131415161718192021222324252627282930313233343536373839404142434445
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/24/poj2251/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -987,7 +1610,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1006,7 +1629,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   
                 </div>
@@ -1023,7 +1650,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -1760,6 +2389,12 @@
 
   
   
+    
+      
+    
+      
+    
+      
     
       
     

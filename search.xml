@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[poj1321]]></title>
+    <title><![CDATA[poj1321 棋盘问题]]></title>
     <url>%2F2018%2F11%2F24%2Fpoj1321%2F</url>
     <content type="text"><![CDATA[题意：在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放k个棋子的所有可行的摆放方案C。 Input 输入含有多组测试数据.每组数据的第一行是两个正整数n k,用一个空格隔开，表示了将在一个n*n的矩阵内描述棋盘,以及摆放棋子的数目.n&lt;= 8,k&lt;= n当为-1 -1时表示输入结束。随后的n行描述了棋盘的形状：每行有n个字符，其中 # 表示棋盘区域， . 表示空白区域（数据保证不出现多余的空白行或者空白列）。Output对于每一组数据，给出一行输出，输出摆放的方案数目C （数据保证C&lt;2^31）.Sample Input2 1 # . . # 4 4 . . . # . . # . . # . . # . . .-1 -1Sample Output2112345678910111213141516171819202122232425262728293031323334353637383940#include &lt;iostream&gt;#include &lt;cstdio&gt;#include &lt;iostream&gt;#include &lt;cstring&gt;using namespace std;typedef long long ll;int n,k;char map[10][10];int vis[10];int ans,cnt;void dfs(int x)&#123; if(cnt==k)&#123; ans++; return ; &#125; if(x&gt;n)return ; for(int i=1;i&lt;=n;++i)&#123; if(x&gt;=1&amp;&amp;x&lt;=n&amp;&amp;map[x][i]=='#'&amp;&amp;!vis[i])&#123; cnt++;vis[i]=1; dfs(x+1); cnt--;vis[i]=0; &#125; &#125; dfs(x+1); return ;&#125;int main()&#123; while(scanf("%d%d",&amp;n,&amp;k))&#123; if(n==-1||k==-1)&#123; break; &#125; for(int i=1;i&lt;=n;++i) scanf("%s",map[i]+1); memset(vis,0,sizeof(vis)); ans=0,cnt=0; dfs(1); cout&lt;&lt;ans&lt;&lt;endl; &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>搜索</category>
+      </categories>
+      <tags>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[poj3279]]></title>
+    <url>%2F2018%2F11%2F24%2Fpoj3279%2F</url>
+    <content type="text"><![CDATA[题意：有一个n*m的格子，每个格子都有黑白两面（0表示白色，1表示黑色）。我们需要把所有的格子都反转成黑色，每反转一个格子，它上下左右的格子都会跟着反转。请求出用最小步数完成反转时每个格子反转的次数。有多个解时，输出字典序最小的一组。 下面引自挑战内容：首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。此外，翻转的格子的集 合相同的话，其次序是无关紧要的。因此，总共有2NM种翻转的方法。不过这个解空间太大了， 我们需要想出更有效的办法。 不妨先看看左上角的格子。在这里，除了翻转(1,1)之外，翻转(1,2)和(2,1)也可以把这个格子翻 转。 于是不妨先指定好上面一行的翻转方法。此时能够翻转(1,1)的只剩下(2,1)了，所以可以直接判 断(2,1)是否需要翻转。类似地(2,1)~(2,N)都能这样判断，如此反复下去就可以确定所有格子的翻 转方法。后(M,1)~(M,N)如果并非全为白色，就意味着不存在可行的操作方法。 像这样，先确定第一行的翻转方式，然后可以很容易判断这样是否存在解以及解的小步数是多 少，这样将第一行的所有翻转方式都尝试一次就能求出整个问题的小步数。这个算法中上面 一行的翻转方式共有2N种，复杂度为O(MN2N)。–引自：《挑战》 模型建立: 0.也就是说除了最后一行，上面的所有行的颜色状态都可以由 在上面的一行的状态进行确定（即0-(n-1)行之间的反转来把他确定位0的状态，第n行在这个时候就直接判断是否都为0的状态，是的话就是有效解，然后在取相对优的解） 1. 第一行的状态咱们又可以通过枚举子集来进行找出所有的情况，那么下面的所有行就可以通过迭代以及是否反转 来确定状态。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273#include &lt;iostream&gt;#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;sstream&gt;#include &lt;stdlib.h&gt;using namespace std;const int inf=0x3f3f3f3f;int n,m;int state[25][25];int en[25][25];int flip[25][25];int dir[5][2]=&#123;&#123;0,0&#125;,&#123;0,1&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;-1,0&#125;&#125;;int get(int x,int y)&#123; int cnt=state[x][y]; for(int i=0;i&lt;5;++i) &#123; int dx=x+dir[i][0]; int dy=y+dir[i][1]; if(dx&lt;0||dx&gt;=n||dy&lt;0||dy&gt;=m)continue; cnt+=flip[dx][dy]; &#125; return cnt&amp;1;&#125;int clca()&#123; for(int i=1;i&lt;n;++i)&#123; for(int j=0;j&lt;m;++j)&#123; if(get(i-1,j)) flip[i][j]=1; &#125; &#125; for(int i=0;i&lt;m;++i)&#123; if(get(n-1,i)) return -1; &#125; int tmp=0; for(int i=0;i&lt;n;++i) for(int j=0;j&lt;m;++j) tmp+=flip[i][j]; return tmp;&#125;void solve()&#123; int ans=-1; //二进制的状态压缩过程,对这道题来讲就是对flip[0]的每一个状态位,都枚举一遍, //只要抓住 移位，设置标志位 两个要素也没有那么难. for(int i=0;i&lt;1&lt;&lt;m;++i)&#123; memset(flip,0,sizeof(flip)); for(int j=0;j&lt;m;++j)&#123; flip[0][j]=i&gt;&gt;j&amp;1; &#125; int cnt=clca();//然后这儿进行判断是解的优劣情况 if(cnt&gt;=0&amp;&amp;(ans&lt;0||ans&gt;cnt))&#123; ans=cnt; memcpy(en,flip,sizeof(flip)); &#125; &#125; if(ans&lt;0)&#123; printf("IMPOSSIBLE\n"); return ; &#125; for(int i=0;i&lt;n;++i) for(int j=0;j&lt;m;++j) printf("%d%c",en[i][j],j+1==m?'\n':' '); //printf("%d\n",ans);&#125;int main()&#123; while(scanf("%d%d",&amp;n,&amp;m)!=EOF)&#123; for(int i=0;i&lt;n;++i) for(int j=0;j&lt;m;++j) scanf("%d",&amp;state[i][j]); solve(); &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>开关问题</category>
+        <category>状态压缩</category>
+      </categories>
+      <tags>
+        <tag>开关问题 状态压缩</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[poj3278 Catch That Cow]]></title>
+    <url>%2F2018%2F11%2F24%2Fpoj3278%2F</url>
+    <content type="text"><![CDATA[FJ要抓奶牛。 开始输入N（FJ的位置）K（奶牛的位置）。FJ有三种移动方法：1、向前走一步，耗时一分钟。 2、向后走一步，耗时一分钟。 3、向前移动到当前位置的两倍N*2，耗时一分钟。问FJ抓到奶牛的最少时间。奶牛不会动。1234567891011121314151617181920212223242526272829303132333435363738394041424344#include&lt;iostream&gt;#include&lt;queue&gt;#include&lt;cstring&gt;#include&lt;cstdio&gt;using namespace std;const int maxn=100001;bool vis[maxn];int step[maxn];void bfs(int n,int k)&#123; memset(step,0,sizeof(step)); memset(vis,false,sizeof(vis)); queue &lt;int&gt; q; int p,tmp; q.push(n); step[n]=0; vis[n]=true; while(!q.empty()) &#123; p=q.front(); q.pop(); if(p==k)&#123;printf("%d\n",step[p]);return ;&#125; for(int i=0;i&lt;3;i++) &#123; if(i==0) tmp=p-1; else if(i==1) tmp=p+1; else tmp=p*2; if(tmp&lt;0 || tmp&gt;=maxn) continue; if(!vis[tmp]) &#123; q.push(tmp); step[tmp]=step[p]+1; vis[tmp]=true; &#125; &#125; &#125;&#125;int main()&#123; int n,k; while(scanf("%d%d",&amp;n,&amp;k)!=EOF)&#123; if(n&gt;=k) printf("%d\n",n-k); else bfs(n,k); &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>搜索</category>
+      </categories>
+      <tags>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[POJ2251 Dungeon Master]]></title>
+    <url>%2F2018%2F11%2F24%2Fpoj2251%2F</url>
+    <content type="text"><![CDATA[题目大意：给一个三维图，可以前后左右上下6种走法，走一步1分钟，求最少时间（其实就是最短路）分析：DFS的话复杂度为O(6^n)会TLE）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778#include &lt;iostream&gt;#include &lt;stdio.h&gt;#include &lt;string.h&gt;#include &lt;queue&gt;#include &lt;algorithm&gt;using namespace std;char map[35][35][35];int vis[35][35][35];int X,Y,Z,sx,sy,sz,ex,ey,ez;int dir[6][3] = &#123;&#123;0,0,1&#125;,&#123;0,0,-1&#125;,&#123;0,1,0&#125;,&#123;0,-1,0&#125;,&#123;1,0,0&#125;,&#123;-1,0,0&#125;&#125;; int step[35][35][35];struct node&#123; int x,y,z;&#125;;int bfs()&#123; node p,next; queue&lt;node&gt; Q; p.x = sx,p.y = sy,p.z = sz; step[sx][sy][sz]=0; vis[sx][sy][sz] = 1; Q.push(p); while(!Q.empty())&#123; p = Q.front(); Q.pop(); if(map[p.x][p.y][p.z]=='E') return step[ex][ey][ez];//p.step; vis[p.x][p.y][p.z]=1; for(int i = 0; i&lt;6; i++) &#123; int dx = p.x+dir[i][0]; int dy = p.y+dir[i][1]; int dz = p.z+dir[i][2]; //if(check(next.x,next.y,next.z)) if(vis[dx][dy][dz]||map[dx][dy][dz]=='#'||dx&lt;0||dx&gt;=X||dy&lt;0||dy&gt;=Y||dz&lt;0||dz&gt;=Z) continue; vis[dx][dy][dz] = 1; next.x=dx,next.y=dy,next.z=dz; step[dx][dy][dz]=step[p.x][p.y][p.z]+1;//next.step = p.step+1; Q.push(next); &#125; &#125; return 0;&#125;int main()&#123; int i,j,r; while(scanf("%d%d%d",&amp;X,&amp;Y,&amp;Z),X+Y+Z) &#123; for(i = 0; i&lt;X; i++) &#123; for(j = 0; j&lt;Y; j++) &#123; scanf("%s",map[i][j]); for(r = 0; r&lt;Z; r++) &#123; if(map[i][j][r] == 'S') &#123; sx = i,sy = j,sz = r; &#125; else if(map[i][j][r] == 'E') &#123; ex = i,ey = j,ez = r; &#125; &#125; &#125; &#125; memset(vis,0,sizeof(vis)); int ans; ans = bfs(); if(ans) printf("Escaped in %d minute(s).\n",ans); else printf("Trapped!\n"); &#125; return 0;&#125;]]></content>
       <categories>
         <category>搜索</category>
       </categories>
